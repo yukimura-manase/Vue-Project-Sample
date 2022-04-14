@@ -1,0 +1,29 @@
+.DS_Store
+node_modules
+/dist
+
+# publicの情報にはFirebaseのユーザー情報などがあるため除外する！
+public/
+
+# main.jsの情報にはFirebaseのユーザー情報などがあるため除外する！
+main.js
+
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

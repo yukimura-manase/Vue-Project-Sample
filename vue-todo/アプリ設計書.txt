@@ -1,0 +1,62 @@
+
+< プロジェクト概要 >
+
+1. プロジェクトName => Vue-Todoアプリ
+
+2. アプリ構造 => フロント側 Vue , バックエンド Express-PostgreSQL
+
+    < アーキテクチャ(構造と関係性) >
+    1.Vue(フロント)
+    2.Express(APIサーバー)
+    3.PostgreSQL(DB:データベース)
+
+3. 基本機能
+    
+    ① TodoのCRUD => 一覧表示, 新規作成, 追加, 削除
+
+    ② ユーザーアカウントのCRUD => ユーザー情報の取得, 新規作成, 更新, 削除
+
+4. Vueプロジェクト(フロント側)の構造
+
+「src/views」
+
+    TodoList.vue (Todo一覧画面) => Todo一覧表示, Todo削除, Todo詳細への遷移
+
+    TodoCreate.vue (Todo新規作成画面) => Todo新規作成
+
+    TodoDetail.vue (Todo詳細画面) => Todo更新
+
+
+「src/components」
+
+    Nav.vue => Navigation機能, Todo一覧への遷移・Todo新規作成画面への遷移, 
+
+
+5. 作成手順(作成の流・フロー)
+
+    Vueフロントアプリ => ExpressAPIサーバーとPostgreSQLのDBを接続
+
+
+< データ構造の定義 >
+
+TodoList :{
+
+}
+
+
+< PostgreSQLのデータ構造 >
+
+「データベース名」 => vue_todo
+
+「テーブル名」
+1.users
+2.todos
+
+
+< todoListデータ構造定義 & 初期データの追加 >
+
+todoList:[ 
+    {id:1,user_id:1,todo:'Reactの学習',detail:'Reactを学ぶロボ玉',handler:'ロボ玉試作1号機',date:'2100-12-12',start:'1995-12-12'},
+    {id:2,user_id:1,todo:'TypeScriptの学習',detail:'TypeScriptを学ぶロボ玉',handler:'ロボ玉試作2号機',date:'2100-12-12',start:'1995-12-12'},
+    {id:3,user_id:1,todo:'Nodeの学習',detail:'Nodeを学ぶロボ玉',handler:'ロボ玉試作3号機',date:'2100-12-12',start:'1995-12-12'}
+]
